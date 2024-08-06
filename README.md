@@ -1,12 +1,8 @@
-# Microservice A - Chatting System
-
-## Communication Contract
-
-### Instructions for Programmatically Requesting Data
-
+Microservice A - Chatting System
+Communication Contract
+Instructions for Programmatically Requesting Data
 To request data from the microservice, you need to connect to the ZeroMQ socket and send a string message. Here is an example using Python:
-
-```python
+python
 import zmq
 
 def request_data():
@@ -23,3 +19,9 @@ def request_data():
 
 if __name__ == "__main__":
     request_data()
+
+Instructions for Programmatically Receiving Data
+When you send a request to the microservice, it will respond with a string message. The example above shows how to receive this response. After sending the request, you use socket.recv_string() to get the reply from the microservice.
+UML Sequence Diagram
+Below is a UML sequence diagram illustrating how the request and response process works:
+![image](https://github.com/user-attachments/assets/ae490f2b-d18e-4d76-8197-8e96a0042700)
